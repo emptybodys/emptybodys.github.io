@@ -3,7 +3,7 @@ layout:     post
 title:      "BirdsSong: A stylized generative audio steganography"
 subtitle:   "Sanfeng Zhang, Baiyu Tian, Mengyao Dai, Wang Yang"
 date:       2023-9-9
-header-img: "img/post-bg-kuaidi.jpg"
+header-img: "img/bg-little-universe.jpg"
 ---
 
 <div>
@@ -11,53 +11,55 @@ header-img: "img/post-bg-kuaidi.jpg"
     <br>StyleGAN and its variants have made significant advancements in the field of image synthesis, allowing for the generation of high-resolution images with precise control over the generation process. Inspired by StyleGAN, this paper introduces a novel audio steganography framework named BirdsSong. The BirdsSong framework aims to enhance steganalysis resistance, increase steganographic capacity, improve audio quality, and diversify the range of styles compared to traditional audio steganography methods. The proposed framework incorporates an audio style extractor that effectively separates the content and style of the reference audio. Additionally, a generator is designed to combine the extracted style vector with the content vector derived from the secret message, resulting in the generation of high-fidelity stego audio. Furthermore, the generator is enhanced to accommodate audio with various styles. Moreover, a new message extractor is devised to recover the secret message with minimal loss in accuracy. Experimental results demonstrate that BirdsSong surpasses baseline methods in terms of steganographic capacity, audio quality, style diversity, and resistance to steganalysis tools.
     <br>
     <br>
-    <br>正文。
+    <br><b>Architecture and Workflow of BirdsSong framework</b>
     <br>
-    <br>应该很多互联网公司都有这项 “福利” ——<b> 加班到X点以后，报销打车费</b>。
-    <br>阿里大约是晚上9点。
+    <br>As shown in figure, the stylized generative audio steganography framework proposed in this paper consists of a preprocess module, a generator module, and an extractor module.
     <br>
-    <br>初进阿里时还不习惯，想着6点下班后，吃个免费晚饭，赶快坐地铁回家。
-    <br>后来一是发现高峰期的地铁简直要命，二是确实有太多需求做不完， 平常经常会说： “这个我们晚上再谈…”
+    <img class="shadow" src="/img/in-post/network%20framework.png" width="460">
     <br>
-    <br>所以晚上加班就成了公司里很多人的常态 ，就算今天 8 点多就已经工作得差不多了，也会习惯性得等到 9 点左右，<b>叫个车回家</b>。
+    <br>Firstly, in the preprocess module, we map the secret message through mapping algorithm into a content vector C that conforms to the normal distribution Z, and extract the stylized feature S1 of the target style audio in the dataset through the WORLD vocoder.
+    <br>Next, in the generator module, the preprocessed stylized feature S1 is fed into the style extractor S to further extract the advanced style feature vector S2. Subsequently, by employing the generator G, we couple the S2 with the content vector C mapped from the secret message to produce a high-fidelity stego audio. To optimize the generator and the discriminator, the stego audio, the real audio, and the penalty audio synthesized from the two previous audio are fed into the discriminator D separately, resulting in discrimination outcomes Ds, Dr, and Dp. Then the similarity is calculated according to Ds and Dr, and fed back to the generator, and the discriminator loss is calculated according to Ds, Dr and Dp, and fed back to the discriminator. Moreover, the stego audio is passed through the style extractor to extract the style vector S3, S3 is then compared with the advanced style feature S2 extracted from the target style audio, thereby evaluating the style loss throughout the generation process. Finally, the generator adapts its generation capability based on the feedback information encompassing content loss, style loss, and the similarity from the discriminator.
     <br>
-    <br>于是，每天 9 ～ 12 点间，公司里的叫车声、电话约车声、络绎不绝。我们团队私下里也有个微信群，用以和工作的旺旺群区分。<b>在打车软件玩起红包返现后，大家就都会在群里分享叫车红包，52个人的群，有时一分钟内不抢，红包就没了。</b>
-    <br>
-    <br>
-    <br>众所周知的，阿里和快的打车的关系。
-    <br>
-    <br>所以群里好像约定俗成般的，从来就没有出现过滴滴的红包。<b>而由于红包返现利滚利带来的超强用户粘性，大家连叫车也都开始只用快的了。</b>
-    <br>
-    <img class="shadow" src="/img/in-post/post-kuaidi-1.jpg" width="260">
-    结果好景不长，微信突然就玩了这么一手，直接把快的打车屏蔽了。
-    <br>当天大家就发现了，还讨论了下对策……<b>比如什么「先分享到微博，然后把链接复制出来，再发到旺旺群」……</b>
-    <br>
-    <br>嗯。我 TM 也觉得挺拼的。。
-    <br>于是大约微信群就沉寂了一天…
-    <br>
-    <br><b>然后才第二天……第一个滴滴红包就在群里出现了！</b>那时的文案还是什么：“<i>4个小伙伴，3个用滴滴！红包召唤新伙伴归队啦！</i>”
-    <br><b>我我我我当时就不由自主的纠结了一会儿 “价值观” ，放下手机 debug 去了……</b>
-    <br><b>等我再想起来，点开链接一看：特么的……「红包已抢完」。</b>
-    <br>
-    <br>。。。
-    <br><b>再后来。</b><b>就根本收不住了，滴滴红包那个飘。</b>
+    <br>In the message extractor module, we use the message extractor to extract content vector C' from the stego audio, and then convert content vector C' back to Secret message through inverse mapping. Comparing the extracted content vector C' with the original content vector C, we calculate the content loss and fed back to the generator.
     <br>
     <br>
-    <br>唉其实我就是想说：<b>这也就一天……用户习惯就被彻底干翻过来了。 就算是盟友…也没救。</b>
+    <br><b>Preprocess Module</b>
     <br>
-    <img class="shadow" src="/img/in-post/post-kuaidi-2.jpg" width="260">
-    所以我今天还是打着滴滴回来的……分享红包的一瞬间，心里突然一阵小惆怅。就回来写下了这段答案。
+    <br>The main task of the preprocess module is to map the secret message into a content vector conforming to a Gaussian distribution and to extract the style feature vector from the referenced style audio. Specifically, we input the waveform signals of sample audio into the WORLD vocoder to extract fundamental frequency features (F0), spectral envelope features, and aperiodic features, which prepares for the extraction of advanced style features during stego audio generation.
     <br>
-    <br>说了半天，好像也没说到什么干货…权当故事听吧。
-    <br>其实你要问我这有没有违反互联网平等开放法则什么的。我觉得上面 <a data-hash="8f7d284bb1a97deaa4533a6190206ecb" href="http://www.zhihu.com/people/8f7d284bb1a97deaa4533a6190206ecb" class="member_mention" data-editable="true" data-title="@覃浩tommy" data-tip="p$b$8f7d284bb1a97deaa4533a6190206ecb">@覃浩tommy</a><a data-hash="43d639a3d763d3dad948e0bc4c645eec" href="http://www.zhihu.com/people/43d639a3d763d3dad948e0bc4c645eec" class="member_mention" data-editable="true" data-title="@赛门" data-tip="p$b$43d639a3d763d3dad948e0bc4c645eec">@赛门</a> 都说得挺好的，两种思路而已，大家可以自行选择。
+    <br>This paper improves the mapping algorithm between secret messages and feature vectors to enhance extraction accuracy. Specifically, we convert the read character string into 8-bit binary according to ASCII code, and combine it into a bit stream. This bit stream is then divided into segments m of length σ, where each segment’s decimal representation falls within the range [0, 2^\sigma-1]. Subsequently, following Equation (1), each segment is mapped into a tensor z. The parameter δ is used to determine the upper and lower boundaries of vector mapping for secret message, while the parameter μ further enhances the fault tolerance space based on δ. It's defined that δ ≤ μ, and the sizes of δ and μ are adjusted as needed to balance extraction accuracy and the quality of stego audio.
     <br>
-    <br>但是关于怎么看待，其实这次我以普通用户的身份来说……真心觉得：<b>「小良心小正义感在强需求面前真特么太弱了」</b><b>。</b><b>更何况这个强需求被干掉的同时还双手奉上了替代品。</b>
-    <br>
-    <br><b><u>所以大厂们你们就使劲撕逼吧，需要打到用户脸时，多给糖多给枣就好了。</u></b>
+    <br>  &z=2×m+12σ-1+random(-δ,+δ)&z∈range2×m+12σ-1-μ，2×m+12σ-1+μ&δ≤μ				(1)
     <br>
     <br>
-    <br>哦对了，今天微信宣布朋友圈内限制分享未备案网页了。
-    <br><b>枣呢 ！？！？</b>
+    <br><b>Generator Module</b>
+    <br>
+    <br>The stego audio generator module is the core part of the whole framework. Its primary role is to combine the content vector C obtained in the preprocessing stage with the advanced style feature vector S' extracted by the style extractor to generate the stego audio. Inspired by StyleGAN, we introduce an idea of style-content coupling within the GAN-based audio generative network, achieving both effective transformation outcomes and faster conversion speeds.
+    <br>
+    <br>We design a style extractor to extract the style feature vector S from the style audio. The structure of the style extractor, as shown in figure, is composed of convolutional layers, residual blocks, and pooling layers. The convolutional layers serve to extract advanced features from the style audio, while the residual blocks enhance the network's expressive capacity and mitigate gradient vanishing issues, and the pooling layer helps the model to focus on the style features and output the result through the linear layer.
+    <br>
+    <img class="shadow" src="/img/in-post/style%20encoder.png" width="460">
+    <br>
+    <br>There is a mapping relationship between the trained style extractor and the audio feature space, which can be represented by Equation (2). Through the mapping relationship, we are able to decouple the audio features into content vectors and style vectors. The dimensionality of the style vectors extracted by the style extractor is [1, 64].
+    <br>
+    <br>  [Content,Style]sampleStyle ExtractorStyle1×64				(2)
+    <br>
+    <br>Subsequently, the content vectors and the style vectors are coupled to generate stego audio by the generator. The network structure of the generator is shown as Fig. 5, comprises a down-sampling convolutional layer, an up-sampling transpose convolutional layer, and a coupling layer for feature coupling. The down-sampling layer is responsible for extracting advanced features from the input content vector to better integrate with the style features and generate high-fidelity audio. The up-sampling layer restores the coupled features to audio form. The coupling layer helps to better combine the content features and the style features, culminating in the final output through the transpose convolutional layers.
+    <br>
+    <img class="shadow" src="/img/in-post/gengerator.png" width="460">
+    <br>
+    <br>Finally, the stego audio generated by the generator is fed into the discriminator. The discriminator distinguishes between the stego audio and the real audio and outputs a similarity score. The network structure of the discriminator, as shown in Fig. 6, employs a fully convolutional layer design to continually extract advanced features and output discrimination results, encouraging the generator to generate high-fidelity audio.
+    <br>
+    <img class="shadow" src="/img/in-post/discriminator.png" width="460">
     <br>
     <br>
+    <br><b>Extractor Module</b>
+    <br>The message extractor module uses a specially trained extractor to decouple the stego audio into corresponding content vector and style vector. And the content vector is inversely mapped back to the secret message according to Equation (2). To ensure the consistency of the extracted content vector, this method trains the extractor together with the generator and the discriminator to promote the generation of consistent and realistic stego audio.
+    <br>
+    <br>The network structure of the extractor is shown in Fig. 7, consisting of convolutional layers, residual blocks, and transposed convolutional layers. The convolutional layers are used to extract advanced features from decoupled content features, the residual blocks enhance the content vector's extraction capability and accuracy, and the transposed convolutional layers transform the advanced content features back into the secret message vector. Additionally, a concat layer and feature summation operations are incorporated to prevent feature degradation and vanishing issues during training, which effectively preserve content features and improve extraction efficiency.
+    <br>
+    <img class="shadow" src="/img/in-post/extractor.png" width="460">
+    <br>
+    <br>
+    <br><b>Compare And Show Audios</b>
 </div>
