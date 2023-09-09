@@ -5,7 +5,7 @@ subtitle:   "Sanfeng Zhang, Baiyu Tian, Mengyao Dai, Wang Yang"
 date:       2023-9-9
 header-img: "img/bg-little-universe.jpg"
 ---
-
+ 
 <div>
     <b>Abstract</b>
     <br>StyleGAN and its variants have made significant advancements in the field of image synthesis, allowing for the generation of high-resolution images with precise control over the generation process. Inspired by StyleGAN, this paper introduces a novel audio steganography framework named BirdsSong. The BirdsSong framework aims to enhance steganalysis resistance, increase steganographic capacity, improve audio quality, and diversify the range of styles compared to traditional audio steganography methods. The proposed framework incorporates an audio style extractor that effectively separates the content and style of the reference audio. Additionally, a generator is designed to combine the extracted style vector with the content vector derived from the secret message, resulting in the generation of high-fidelity stego audio. Furthermore, the generator is enhanced to accommodate audio with various styles. Moreover, a new message extractor is devised to recover the secret message with minimal loss in accuracy. Experimental results demonstrate that BirdsSong surpasses baseline methods in terms of steganographic capacity, audio quality, style diversity, and resistance to steganalysis tools.
