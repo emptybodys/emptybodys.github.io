@@ -53,14 +53,28 @@ header-img: "img/bg-little-universe.jpg"
     <br>
     <table border="1">
     <tr>
-    <td><audio src="/media/real/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" height="50" width="30"></td>
-    <td></audio><audio src="/media/real/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" height="50" width="30"></td>
-    <td></audio><audio src="/media/real/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" height="50" width="30"></audio></td>
+    <td><b>Real Bird</b></td>
+    <td><b>Real Rain</b></td>
+    <td><b>BirdsSong Bird</b></td>
+    <td><b>BirdsSong Rain</b></td>
+    <td><b>Griffin-Lim</b></td>
+    <td><b>WaveNet</b></td>
+    <td><b>WaveGlow</b></td>
     </tr>
     <tr>
-    <td>400</td>
-    <td>500</td>
-    <td>600</td>
+    <td><audio src="/media/real/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="30px"></audio></td>
+    </tr>
+    <tr>
+    <td><audio src="/media/real/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="30px"></audio></td>
+    </tr>
+    <tr>
+    <td><audio src="/media/real/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="30px"></audio></td>
+    </tr>
+    <tr>
+    <td><audio src="/media/real/bird/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="30px"></audio></td>
+    </tr>
+    <tr>
+    <td><audio src="/media/real/bird/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="30px"></audio></td>
     </tr>
     </table>
     
