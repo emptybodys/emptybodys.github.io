@@ -51,5 +51,5 @@ header-img: "img/bg-little-universe.jpg"
     <img class="shadow" src="/img/in-post/extractor.png" width="600">
     <br><b>Compare And Show Audios</b>
     <br>
-    <audio src="/media/real/bird/1.wav" height="20" width="20"></audio><audio src="/media/real/bird/2.wav" height="20" width="20"></audio><audio src="/media/real/bird/3.wav" height="20" width="20"></audio>
+    <audio src="/media/real/bird/1.wav" height="50" width="30"></audio><audio src="/media/real/bird/2.wav" height="50" width="30"></audio><audio src="/media/real/bird/3.wav" height="50" width="30"></audio>
 </div>
