@@ -24,7 +24,7 @@ exclude:
     "README.md",
     "README.zh.md",
   ]
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+#anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN
 
@@ -55,12 +55,12 @@ disqus_username: hux
 netease_comment: false
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+#ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
+page-mathjax: true
