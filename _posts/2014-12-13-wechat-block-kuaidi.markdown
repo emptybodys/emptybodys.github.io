@@ -1,21 +1,14 @@
 ---
 layout:     post
-title:      "如何看待微信屏蔽快的打车事件？"
-subtitle:   "恰有小感。"
-date:       2014-12-13
-author:     "Hux"
+title:      "BirdsSong: A stylized generative audio steganography"
+subtitle:   "Sanfeng Zhang, Baiyu Tian, Mengyao Dai, Wang Yang"
+date:       2023-9-9
 header-img: "img/post-bg-kuaidi.jpg"
-tags:
-    - 知乎
-    - 产品
 ---
 
-> 这篇文章转载自[我在知乎上的回答](http://www.zhihu.com/question/26774049/answer/35041458)
-
-
 <div>
-    唉。今天恰巧有感，过来小聊几句。
-    <br>还是要先声明下：<b>所有言论出自个人，与阿里和我所在的团队无关。</b>
+    <b>Abstract</b>
+    <br>StyleGAN and its variants have made significant advancements in the field of image synthesis, allowing for the generation of high-resolution images with precise control over the generation process. Inspired by StyleGAN, this paper introduces a novel audio steganography framework named BirdsSong. The BirdsSong framework aims to enhance steganalysis resistance, increase steganographic capacity, improve audio quality, and diversify the range of styles compared to traditional audio steganography methods. The proposed framework incorporates an audio style extractor that effectively separates the content and style of the reference audio. Additionally, a generator is designed to combine the extracted style vector with the content vector derived from the secret message, resulting in the generation of high-fidelity stego audio. Furthermore, the generator is enhanced to accommodate audio with various styles. Moreover, a new message extractor is devised to recover the secret message with minimal loss in accuracy. Experimental results demonstrate that BirdsSong surpasses baseline methods in terms of steganographic capacity, audio quality, style diversity, and resistance to steganalysis tools.
     <br>
     <br>
     <br>正文。
