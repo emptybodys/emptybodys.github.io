@@ -25,7 +25,11 @@ header-img: "img/bg-little-universe.jpg"
     <br>
     <br>This paper improves the mapping algorithm between secret messages and feature vectors to enhance extraction accuracy. Specifically, we convert the read character string into 8-bit binary according to ASCII code, and combine it into a bit stream. This bit stream is then divided into segments m of length σ, where each segment’s decimal representation falls within the range [0, 2^\sigma-1]. Subsequently, following Equation (1), each segment is mapped into a tensor z. The parameter δ is used to determine the upper and lower boundaries of vector mapping for secret message, while the parameter μ further enhances the fault tolerance space based on δ. It's defined that δ ≤ μ, and the sizes of δ and μ are adjusted as needed to balance extraction accuracy and the quality of stego audio.
     <br>
-    <br>  &z=2×m+12σ-1+random(-δ,+δ)&z∈range2×m+12σ-1-μ，2×m+12σ-1+μ&δ≤μ				(1)
+    <br>&&\left\{ \begin{matrix}
+{z = \frac{2 \times m + 1}{2^{\sigma}} - 1 + random( - \delta, + \delta)} \\
+{z \in range\left( {\frac{2 \times m + 1}{2^{\sigma}} - 1 - \mu ，\frac{2 \times m + 1}{2^{\sigma}} - 1 + \mu} \right)} \\
+{\delta \leq \mu}
+\end{matrix} \right.   (1)&&
     <br>
     <br><b>Generator Module</b>
     <br>The stego audio generator module is the core part of the whole framework. Its primary role is to combine the content vector C obtained in the preprocessing stage with the advanced style feature vector S' extracted by the style extractor to generate the stego audio. Inspired by StyleGAN, we introduce an idea of style-content coupling within the GAN-based audio generative network, achieving both effective transformation outcomes and faster conversion speeds.
@@ -35,7 +39,7 @@ header-img: "img/bg-little-universe.jpg"
     <img class="shadow" src="/img/in-post/style%20encoder.png" width="600">
     <br>There is a mapping relationship between the trained style extractor and the audio feature space, which can be represented by Equation (2). Through the mapping relationship, we are able to decouple the audio features into content vectors and style vectors. The dimensionality of the style vectors extracted by the style extractor is [1, 64].
     <br>
-    <br>  $$[Content,Style]sampleStyle ExtractorStyle1×64				(2)$$
+    <br>  $$\lbrack Content,Style\rbrack_{sample}\overset{Style~Extractor}{\rightarrow}{Style}^{1 \times 64}   (2)$$
     <br>
     <br>Subsequently, the content vectors and the style vectors are coupled to generate stego audio by the generator. The network structure of the generator is shown as figure, comprises a down-sampling convolutional layer, an up-sampling transpose convolutional layer, and a coupling layer for feature coupling. The down-sampling layer is responsible for extracting advanced features from the input content vector to better integrate with the style features and generate high-fidelity audio. The up-sampling layer restores the coupled features to audio form. The coupling layer helps to better combine the content features and the style features, culminating in the final output through the transpose convolutional layers.
     <br>
