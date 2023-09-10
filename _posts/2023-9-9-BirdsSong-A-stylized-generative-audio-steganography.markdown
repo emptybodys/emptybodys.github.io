@@ -62,34 +62,49 @@ header-img: "img/bg-little-universe.jpg"
     <td><b>WaveGlow Bird</b></td>
     </tr>
     <tr>
-    <td><audio src="/media/real/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/real/rain/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/rain/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
+    <td><audio src="/media/real/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/real/rain/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/bird/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/rain/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/griffin-lim/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/wavenet/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/waveglow/1.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
     </tr>
     <tr>
-    <td><audio src="/media/real/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/real/rain/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/rain/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
+    <td><audio src="/media/real/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/real/rain/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/bird/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/rain/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/griffin-lim/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/wavenet/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/waveglow/2.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
     </tr>
     <tr>
-    <td><audio src="/media/real/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/real/rain/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/rain/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
+    <td><audio src="/media/real/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/real/rain/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/bird/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/rain/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/griffin-lim/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/wavenet/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/waveglow/3.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
     </tr>
     <tr>
-    <td><audio src="/media/real/bird/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/real/rain/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/bird/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/rain/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
+    <td><audio src="/media/real/bird/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/real/rain/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/bird/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/rain/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/griffin-lim/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/wavenet/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/waveglow/4.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
     </tr>
     <tr>
-    <td><audio src="/media/real/bird/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/real/rain/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/bird/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
-    <td><audio src="/media/birdssong/rain/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false" style="width:150%;"></audio></td>
+    <td><audio src="/media/real/bird/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/real/rain/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/bird/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/birdssong/rain/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/griffin-lim/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/wavenet/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
+    <td><audio src="/media/waveglow/5.wav" controls="controls" controlsList="nodownload" οncοntextmenu="return false"></audio></td>
     </tr>
     </table>
     
