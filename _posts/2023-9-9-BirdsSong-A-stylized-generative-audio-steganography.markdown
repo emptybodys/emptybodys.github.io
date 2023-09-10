@@ -35,7 +35,7 @@ header-img: "img/bg-little-universe.jpg"
     <img class="shadow" src="/img/in-post/style%20encoder.png" width="600">
     <br>There is a mapping relationship between the trained style extractor and the audio feature space, which can be represented by Equation (2). Through the mapping relationship, we are able to decouple the audio features into content vectors and style vectors. The dimensionality of the style vectors extracted by the style extractor is [1, 64].
     <br>
-    <br>  [Content,Style]sampleStyle ExtractorStyle1×64				(2)
+    <br>  $$[Content,Style]sampleStyle ExtractorStyle1×64				(2)$$
     <br>
     <br>Subsequently, the content vectors and the style vectors are coupled to generate stego audio by the generator. The network structure of the generator is shown as figure, comprises a down-sampling convolutional layer, an up-sampling transpose convolutional layer, and a coupling layer for feature coupling. The down-sampling layer is responsible for extracting advanced features from the input content vector to better integrate with the style features and generate high-fidelity audio. The up-sampling layer restores the coupled features to audio form. The coupling layer helps to better combine the content features and the style features, culminating in the final output through the transpose convolutional layers.
     <br>
